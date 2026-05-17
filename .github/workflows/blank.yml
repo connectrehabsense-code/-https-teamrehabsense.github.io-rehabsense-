@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehabsense Innovation | Healthcare Research & Mentorship</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0a192f; /* Deep Navy Blue */
+            --secondary: #00b4d8; /* Teal / Innovation Cyan */
+            --accent: #ffb703; /* Launch Offer Gold */
+            --text-dark: #2d3748;
+            --text-light: #f8f9fa;
+            --bg-light: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* --- Announcement Banner --- */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--accent), #f39c12);
+            color: var(--primary);
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .promo-banner i {
+            margin-right: 8px;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            background-color: var(--primary);
+            padding: 20px 10px;
+            position: relative;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 60%, rgba(10, 25, 47, 0.95)), 
+                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 15px 35px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--text-light);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            font-size: 1rem;
+        }
+
+        /* --- About Section --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .focus-box {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .focus-box h4 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .focus-box ul {
+            list-style: none;
+        }
+
+        .focus-box ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .focus-box ul li i {
+            color: var(--secondary);
+        }
+
+        /* --- Services Section --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-top: 4px solid var(--secondary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* --- Offer Section (Mid page CTA) --- */
+        .offer-block {
+            background: linear-gradient(135deg, #0e2240, var(--primary));
+            color: var(--text-light);
+            padding: 60px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-block h2 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .offer-block p {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            background-color: rgba(255, 183, 3, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* --- Contact Section --- */
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #f8fafc;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background-color: #fff;
+        }
+
+        .submit-btn {
+            background-color: var(--primary);
+            color: var(--text-light);
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #143260;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--secondary);
+        }
+
+        footer p {
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .footer-tagline {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        /* --- Responsive Queries --- */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grand Opening Announcement -->
+    <div class="promo-banner">
+        <i class="fa-solid fa-bolt"></i> GRAND OPENING OFFER: 50% OFF on Thesis Prep & Mentorship for the first 5 students! Slots filling fast.
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-wave-square"></i> Rehabsense <span>Innovation</span>
+            </a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Consult Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Where Rehabilitation Meets <span>Scientific Research</span></h1>
+            <p>Empowering Physiotherapy, Nursing, and Allied Health Sciences students with premium, evidence-based academic mentoring and research infrastructure support.</p>
+            <a href="#contact" class="cta-btn">Claim 50% Opening Discount</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-subtitle">Bridging the gap between clinical expertise, systematic research methodology, and emerging healthcare innovations.</p>
+        
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Your Academic Navigation Partner</h3>
+                <p>Navigating university thesis protocols, scientific writing structures, and data handling processes can be overwhelming alongside heavy clinical rotation hours.</p>
+                <p>At <strong>Rehabsense Innovation</strong>, we offer personalized structural guidance, systematic literature search pathways, and data presentation alignment strategies tailored specifically for modern healthcare disciplines.</p>
+            </div>
+            <div class="focus-box">
+                <h4>Specially Focused On:</h4>
+                <ul>
+                    <li><i class="fa-solid fa-user-doctor"></i> Bachelor of Physiotherapy (BPT) Students</li>
+                    <li><i class="fa-solid fa-user-graduate"></i> Master of Physiotherapy (MPT) Cohorts</li>
+                    <li><i class="fa-solid fa-user-nurse"></i> Nursing & Allied Health Stream Scholars</li>
+                    <li><i class="fa-solid fa-microscope"></i> Early-stage Med-Tech Innovators</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background-color: rgba(0, 180, 216, 0.03); max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Ethical, structural, and professional mentorship frameworks designed to maximize your scientific study value.</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-compass"></i></div>
+                    <h3>Topic Selection & Design</h3>
+                    <p>Formulate novel, highly feasible, and institutional-compliant research questions tailored to evidence-based practice criteria.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>Synopsis & Proposal Support</h3>
+                    <p>Step-by-step structural framing of research logic, need for the study, clean objectives, and clear methodology write-ups.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>Literature Review Methods</h3>
+                    <p>Learn strategic extraction strings for PubMed and Google Scholar, alongside clean documentation workflows via reference managers.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                    <h3>Statistical Interpretation</h3>
+                    <p>Clear tracking and organization of baseline study data with step-by-step translation guidance for charts, variables, and descriptive analytics.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-display"></i></div>
+                    <h3>PPT & Viva Presentation</h3>
+                    <p>Polished, high-impact medical presentation decks and defenses styled meticulously to stand up to stringent academic review boards.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Healthcare Innovation</h3>
+                    <p>Consultation support for clinical validation, digital tracking frameworks, and translational ideation for healthcare wearables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Breakout Section -->
+    <section style="max-width: 1200px;">
+        <div class="offer-block">
+            <span class="badge">Limited Period Campaign</span>
+            <h2>Accelerate Your Thesis Journey Today</h2>
+            <p>Be among the first 5 student researchers to book an end-to-end consultancy tier and instantly receive flat 50% discount terms on initial billing schedules.</p>
+            <a href="#contact" class="cta-btn" style="background-color: var(--accent); color: var(--primary);">Secure Your Slot Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Submit your research requirements below. Our advisory desk will get back to you within 24 working hours.</p>
+        
+        <div class="contact-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="name@university.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Academic Stream</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Select your current course</option>
+                        <option value="bpt">Bachelor of Physiotherapy (BPT)</option>
+                        <option value="mpt">Master of Physiotherapy (MPT)</option>
+                        <option value="nursing">Nursing Stream</option>
+                        <option value="allied">Allied Health Sciences</option>
+                        <option value="other">Other / Innovator</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service">Required Assistance Tier</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a primary service</option>
+                        <option value="topic">Topic Selection / Consultation</option>
+                        <option value="synopsis">Synopsis & Proposal Formatting</option>
+                        <option value="thesis">Full Thesis Mentorship (50% OFF Slot)</option>
+                        <option value="ppt">PPT Creation & Viva Practice</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Brief Description of Your Research Interest</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Mention tentative topics, constraints, or university submission timeline rules..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Consultation Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-tagline">Empowering Research. Advancing Rehabilitation. Innovating Healthcare.</p>
+        <p>&copy; 2026 Rehabsense Innovation. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Disclaimer: We operate strictly as an academic consultancy, steering ethical research mentorship support and structural layout guidance lines.</p>
+    </footer>
+
+</body>
+</html>
