@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rehabsense Innovation | Healthcare Research & Mentorship</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -411,12 +409,10 @@
 </head>
 <body>
 
-    <!-- Grand Opening Announcement -->
     <div class="promo-banner">
         <i class="fa-solid fa-bolt"></i> GRAND OPENING OFFER: 50% OFF on Thesis Prep & Mentorship for the first 5 students! Slots filling fast.
     </div>
 
-    <!-- Navigation Header -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -430,7 +426,6 @@
         </div>
     </header>
 
-    <!-- Hero Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Where Rehabilitation Meets <span>Scientific Research</span></h1>
@@ -439,7 +434,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2 class="section-title">Who We Are</h2>
         <p class="section-subtitle">Bridging the gap between clinical expertise, systematic research methodology, and emerging healthcare innovations.</p>
@@ -462,44 +456,37 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" style="background-color: rgba(0, 180, 216, 0.03); max-width: 100%;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">Ethical, structural, and professional mentorship frameworks designed to maximize your scientific study value.</p>
             
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-compass"></i></div>
                     <h3>Topic Selection & Design</h3>
                     <p>Formulate novel, highly feasible, and institutional-compliant research questions tailored to evidence-based practice criteria.</p>
                 </div>
-                <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-file-invoice"></i></div>
                     <h3>Synopsis & Proposal Support</h3>
                     <p>Step-by-step structural framing of research logic, need for the study, clean objectives, and clear methodology write-ups.</p>
                 </div>
-                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                     <h3>Literature Review Methods</h3>
                     <p>Learn strategic extraction strings for PubMed and Google Scholar, alongside clean documentation workflows via reference managers.</p>
                 </div>
-                <!-- Service 4 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-chart-simple"></i></div>
                     <h3>Statistical Interpretation</h3>
                     <p>Clear tracking and organization of baseline study data with step-by-step translation guidance for charts, variables, and descriptive analytics.</p>
                 </div>
-                <!-- Service 5 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-display"></i></div>
                     <h3>PPT & Viva Presentation</h3>
                     <p>Polished, high-impact medical presentation decks and defenses styled meticulously to stand up to stringent academic review boards.</p>
                 </div>
-                <!-- Service 6 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
                     <h3>Healthcare Innovation</h3>
@@ -509,7 +496,6 @@
         </div>
     </section>
 
-    <!-- Promotion Breakout Section -->
     <section style="max-width: 1200px;">
         <div class="offer-block">
             <span class="badge">Limited Period Campaign</span>
@@ -519,24 +505,23 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
     <section id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Submit your research requirements below. Our advisory desk will get back to you within 24 working hours.</p>
         
         <div class="contact-container">
-            <form action="#" method="POST">
+            <form action="https://formspree.io/f/xredzvda" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <input type="text" id="name" name="Student_Name" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="name@university.com" required>
+                    <input type="email" id="email" name="Email_Address" placeholder="name@university.com" required>
                 </div>
                 <div class="form-group">
                     <label for="course">Academic Stream</label>
-                    <select id="course" name="course" required>
+                    <select id="course" name="Academic_Stream" required>
                         <option value="" disabled selected>Select your current course</option>
                         <option value="bpt">Bachelor of Physiotherapy (BPT)</option>
                         <option value="mpt">Master of Physiotherapy (MPT)</option>
@@ -547,7 +532,7 @@
                 </div>
                 <div class="form-group">
                     <label for="service">Required Assistance Tier</label>
-                    <select id="service" name="service" required>
+                    <select id="service" name="Requested_Service" required>
                         <option value="" disabled selected>Select a primary service</option>
                         <option value="topic">Topic Selection / Consultation</option>
                         <option value="synopsis">Synopsis & Proposal Formatting</option>
@@ -557,14 +542,13 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Brief Description of Your Research Interest</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Mention tentative topics, constraints, or university submission timeline rules..."></textarea>
+                    <textarea id="message" name="Research_Details" rows="4" placeholder="Mention tentative topics, constraints, or university submission timeline rules..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Consultation Request</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p class="footer-tagline">Empowering Research. Advancing Rehabilitation. Innovating Healthcare.</p>
         <p>&copy; 2026 Rehabsense Innovation. All Rights Reserved.</p>
